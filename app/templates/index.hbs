@@ -1,0 +1,13 @@
+<h1>hi from index</h1>
+
+<div class="container">
+  <h3>Users</h3>
+
+  {{#each model as |user|}}
+    <ul>
+      {{user-item name=user.name phoneNumber=user.phone_number password=user.password roleId=user.role_id tagName="li"}}
+    </ul>
+  {{/each}}
+</div>
+
+{{outlet}}

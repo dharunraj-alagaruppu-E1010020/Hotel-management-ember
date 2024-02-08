@@ -1,0 +1,28 @@
+{{outlet}}
+
+<h1>Register here</h1>
+
+<form onsubmit={{action "create_user"}}>
+  <label for="name">Name:</label>
+  {{input type="text" id="name" value=model.name}}
+  <br />
+  <br />
+  <label for="phoneNumber">Phone Number:</label>
+  {{input type="number" id="phoneNumber" value=model.phone_number}}
+  <br />
+  <br />
+  <label for="password">Password:</label>
+  {{input type="password" id="password" value=model.password}}
+  <br />
+  <br />
+  {{ role-select role_obj=model.roles selectedRoleId=model.selectedRoleId}} 
+
+  {{!-- role_id=model.role_id --}}
+  <br />
+  <br />
+  <button type="submit">Submit</button>
+  <br>
+  <br>
+{{#link-to 'login'}}Go to Login{{/link-to}}
+
+</form>

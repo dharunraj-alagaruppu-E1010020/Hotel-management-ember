@@ -1,0 +1,13 @@
+
+<h1>User list of restaurant</h1>
+
+{{#each model as |i|}}
+  <div>
+    <h2>{{i.name}}</h2>
+    <p>Description: {{i.description}}</p>
+    <p>Start Time: {{i.available_start_time}}</p>
+    <p>End Time: {{i.available_end_time}}</p>
+    <hr>
+  </div>
+{{/each}}
+

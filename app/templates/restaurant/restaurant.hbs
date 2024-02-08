@@ -1,0 +1,50 @@
+
+<h1>Welcome,</h1>
+<h1>Add restaurant here - Admin</h1>
+
+<form onsubmit={{action "add_restaurant"}}>
+  <label for="name">Restaurant name:</label>
+  {{input type="text" id="name" value=name}}
+  <br />
+  <br />
+  <label for="description">Description:</label>
+  {{input type="text" id="description" value=description}}
+  <br />
+  <br />
+ <label for="start_time">Start time:</label>
+ {{input type="time" id="start_time" value=start_time}}
+  <br />
+  <br />
+  <label for="end_time">End time:</label>
+  {{input type="time" id="end_time" value=end_time}}
+  <br />
+  <br />
+  <button type="submit">Submit</button>
+  
+</form>
+
+<h1>Restaurants</h1>
+<h1>Number of restaurant : {{model.count}}</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |restaurant|}}
+      <tr>
+        <td>{{restaurant.name}}</td>
+        <td>{{restaurant.description}}</td>
+        <td>
+        {{#link-to 'restaurant.edit' restaurant.id}}
+          <button>Update</button>
+        {{/link-to}}
+          <button {{action 'deleteRestaurant' restaurant}}>Delete</button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

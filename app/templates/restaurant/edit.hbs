@@ -1,0 +1,20 @@
+{{outlet}}
+
+<h1>Update Restaurant</h1>
+
+<form onsubmit={{action 'updateRestaurant'}}>
+  <label>
+    Name:
+    {{input type="text" value=model.name}}
+    {{log model.id 'erereerer'}}
+  </label>
+  <br>
+  <br>
+  <label>
+    Description:
+    {{textarea value=model.description}}
+  </label>
+  <br>
+  <br>
+  <button  type="submit">Update</button> 
+</form>
