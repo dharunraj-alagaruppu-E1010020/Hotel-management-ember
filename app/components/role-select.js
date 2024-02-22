@@ -8,6 +8,6 @@ export default Ember.Component.extend({
         handleRoleSelection(e) {
             console.log(e.target.value);
             this.set('selectedRoleId', e.target.value);
-          }
+        }
     }
 });

@@ -12,18 +12,5 @@ export default Ember.Route.extend({
         id: user_id
       }
     })
-
-    // const ans =  Ember.$.ajax({
-    //     url: `http://localhost:3000/restaurant/${user_id}/list_of_restaurant`,
-    //     type:'GET',
-    //     contentType: 'application/json',
-    //     sucess: (response) => {
-    //         return response;
-    //     }
-    // })
-    // console.log(ans);
-    // return ans;
-
-    // return this.store.findAll('restaurants');
   }
 });

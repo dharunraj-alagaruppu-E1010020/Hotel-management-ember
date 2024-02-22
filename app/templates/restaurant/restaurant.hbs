@@ -1,5 +1,6 @@
 
-<h1>Welcome,</h1>
+{{!-- {{log user-name.user_name}} --}}
+<h1>Welcome, {{user-profile}}</h1>
 <h1>Add restaurant here - Admin</h1>
 
 <form onsubmit={{action "add_restaurant"}}>
@@ -24,7 +25,6 @@
 </form>
 
 <h1>Restaurants</h1>
-<h1>Number of restaurant : {{model.count}}</h1>
 <table>
   <thead>
     <tr>
